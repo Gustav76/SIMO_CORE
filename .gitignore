@@ -1,6 +1,11 @@
-# Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
-bin
+# Build Folders (you can keep bin if you'd like, to store dlls and pdbs
+
+# No track generated dlls
+bin/Debug/SIMO_CORE.dll
+bin/Debug/SIMO_CORE.pdb
+
+# Ignore generated app
 obj
 
-# mstest test results
+# Ignore test results
 TestResults

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SIMO_CORE" namespace="SIMO_CORE.Modelo">
+    <class  name="Identidad, SIMO_CORE" table="identidad">
+        <id name="idIdentidad" column="ID_IDENTIDAD" unsaved-value="0"/>
+        <many-to-one name="usuarioIdentidad" class="Usuario, SIMO_CORE.Modelo" column="ID_USUARIO"/>
+        <property name="nombreIdentidad" column="NOMBRE_IDENTIDAD"/>
+        <property name="claveIdentidad" column="CLAVE_IDENTIDAD"/>
+    </class>
+</hibernate-mapping>

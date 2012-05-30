@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SIMO_CORE" namespace="SIMO_CORE.Modelo">
+    <class  name="DetalleIdentidadSistemaObjetivo, SIMO_CORE" table="detalle_identidad_sistema_objetivo" lazy="false">
+        <id name="idDetalle" column="ID_DETALLE" unsaved-value="0"/>
+        <many-to-one name="identidadDetalle" class="Identidad, SIMO_CORE.Modelo" column="ID_IDENTIDAD"/>
+        <many-to-one name="sistemaDetalle" class="SistemaObjetivo, SIMO_CORE.Modelo" column="ID_SISTEMA_OBJERIVO"/>
+    </class>
+</hibernate-mapping>

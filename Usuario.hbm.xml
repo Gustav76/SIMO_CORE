@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SIMO_CORE" namespace="SIMO_CORE.Modelo">
+    <class  name="Usuario, SIMO_CORE" table="usuario">
+        <id name="idUsuario" column="ID_USUARIO" unsaved-value="0"/>
+        <property name="usuario" column="USUARIO"/>
+        <property name="claveUsuario" column="CLAVE_USUARIO"/>
+        <property name="nombres" column="NOMBRES"/>
+        <property name="apellidos" column="APELLIDOS"/>
+        <property name="fechaNacimiento" column="FECHA_NACIMIENTO" type="date"/>
+        <property name="fechaIngreso" column=" FECHA_INGRESO" type="date"/>
+        <property name="fechaDesligado" column="FECHA_DESLIGADO" type="date"/>
+        <property name="estado" column="ESTADO"/>
+        <property name="grupos" column="GRUPOS"/>
+    </class>
+</hibernate-mapping>

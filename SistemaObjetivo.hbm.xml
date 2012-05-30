@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SIMO_CORE" namespace="SIMO_CORE.Modelo">
+    <class  name="SistemaObjetivo, SIMO_CORE" table="sistema_objetivo">
+        <id name="idSistemaObjetivo" column="ID_SISTEMA_OBJERIVO" unsaved-value="0"/>
+        <property name="nombreSistemaObjetivo" column="NOMBRE_SISTEMA_OBJETIVO"/>
+        <property name="direccionSistemaObjetivo" column="DIRECCION_SISTEMA_OBJETIVO"/>
+    </class>
+</hibernate-mapping>
