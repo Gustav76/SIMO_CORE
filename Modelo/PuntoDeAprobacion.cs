@@ -4,6 +4,10 @@
 // Purpose: Definition of Class PuntoDeAprobacion
 
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using NHibernate;
+using NHibernate.Transaction;
 
 namespace SIMO_CORE.Modelo
 {
@@ -32,6 +36,17 @@ namespace SIMO_CORE.Modelo
         public override int GetHashCode()
         {
             return idPuntoAprobacion;
+        }
+
+        //TODO LIST: REVISAR MAPEO Y QUERY
+        public static IList<PuntoDeAprobacion> Listar()
+        {
+            ISession sesion = config.abrirSesion();
+            ITransaction tx = sesion.BeginTransaction();
+            IQuery query = sesion.CreateQuery("from PuntoDeAprobacion");
+            IList<PuntoDeAprobacion> resultado = query.List<PuntoDeAprobacion>();
+            tx.Commit();
+            return resultado;
         }
     }
 }
